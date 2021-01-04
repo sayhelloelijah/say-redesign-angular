@@ -44,21 +44,32 @@
 }
 
 .social-links {
-    font-size: 3.5em;
+    font-size: 2.5em;
     list-style: none;
     margin: 0;
     padding: 0;
 
     @at-root &-item {
+        color: $black;
+        cursor: pointer;
         display: inline-block;
+        margin: 0 1em 0.7em 0;
 
-        @at-root &--facebook {
+        @at-root &--email:hover {
+          color: darken($primary-color, 40%);
+        }
+
+        @at-root &--facebook:hover {
             color: $facebook;
         }
 
-        @at-root &--linked-in {
-            color: $linkedin;
+        @at-root &--instagram:hover {
+          color: $instagram;
         }
+
+        @at-root &--linked-in:hover {
+          color: $linkedin;
+      }
     }
 }
 
