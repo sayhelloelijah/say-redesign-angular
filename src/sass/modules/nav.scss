@@ -46,9 +46,99 @@
         }
 
         @at-root &-logo {
+            animation: fillSVG 0.5s ease forwards 3.25s;
+            fill: transparent;
             max-width: 241px;
             max-height: 52px;
             width: 100%;
+
+            path, rect:nth-child(2), rect:nth-child(3) {
+              stroke: $black {
+                width: 1 !important;
+              }
+            }
+
+            path:first-child{
+              animation: line-anim 3s ease forwards, fillSVG 0.75s ease forwards 3.25s;
+              stroke-dasharray: 115.04533386230469px;
+              stroke-dashoffset: 115.04533386230469px;
+            }
+            path:nth-child(2){
+              stroke-dasharray: 97.29486846923828;
+              stroke-dashoffset: 97.29486846923828;
+              animation: line-anim 3s ease forwards 0.4s 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(3){
+              stroke-dasharray: 53.06026077270508;
+              stroke-dashoffset: 53.06026077270508;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(4){
+              stroke-dasharray: 96.11224365234375;
+              stroke-dashoffset: 96.11224365234375;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(5){
+              stroke-dasharray: 68.9691162109375;
+              stroke-dashoffset: 68.9691162109375;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(6){
+              stroke-dasharray: 112.17403411865234;
+              stroke-dashoffset: 112.17403411865234;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(7){
+              stroke-dasharray: 187.29747009277344;
+              stroke-dashoffset: 187.29747009277344;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(8){
+              stroke-dasharray: 53.060333251953125;
+              stroke-dashoffset: 53.060333251953125;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(9){
+              stroke-dasharray: 97.2949447631836;
+              stroke-dashoffset: 97.2949447631836;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(10){
+              stroke-dasharray: 97.29497528076172;
+              stroke-dashoffset: 97.29497528076172;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(11){
+              stroke-dasharray: 53.060340881347656;
+              stroke-dashoffset: 53.060340881347656;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(12){
+              stroke-dasharray: 68.96916961669922;
+              stroke-dashoffset: 68.96916961669922;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(13){
+              stroke-dasharray: 109.5701904296875;
+              stroke-dashoffset: 109.5701904296875;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            path:nth-child(14){
+              stroke-dasharray: 49.41770935058594;
+              stroke-dashoffset: 49.41770935058594;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+
+            rect:nth-child(2){
+              stroke-dasharray: 251.8640899658203;
+              stroke-dashoffset: 251.8640899658203;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
+            rect:nth-child(3){
+              stroke-dasharray: 41.136207580566406;
+              stroke-dashoffset: 41.136207580566406;
+              animation: line-anim 3s ease forwards 0.4s, fillSVG 0.5s ease forwards 3.25s;
+            }
         }
     }
 }

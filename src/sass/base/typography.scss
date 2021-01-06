@@ -1,17 +1,20 @@
-@import url(https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Pacifico&family=Roboto&display=swap);
+.ff-pacifico {
+  font-family: 'Pacifico', cursive;
+}
 
 h1, h2, h3, h4, h5, h6, nav {
     font-family: 'Asap', sans-serif;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 6em;
+    line-height: 1.2;
     margin: 0;
 }
 
 p {
     font: {
-        family: 'Roboto';
+        family: 'Asap';
         size: 1.6em;
     }
 }
