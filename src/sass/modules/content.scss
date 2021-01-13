@@ -119,7 +119,7 @@
       flex-basis: 33.3%;
       margin-top: 1em;
 
-      @at-root &:nth-child(1), &:nth-child(2),  &:nth-child(3), {
+      @at-root &:nth-child(1), &:nth-child(2),  &:nth-child(3) {
         margin-top: 0;
       }
 
