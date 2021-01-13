@@ -1,7 +1,7 @@
 .home {
     background-color: $primary-color;
 
-    @at-root p {
+    @at-root &_copy {
       max-width: 29em;
       line-height: 1.5;
     }
@@ -19,14 +19,17 @@
     @media screen and (min-width: 768px) {
         max-width: 768px;
     }
+    @media screen and (min-width: 960px) {
+      max-width: 1200px;
+    }
 }
 
 .button {
-    @include color($primary-color, $primary-color);
-    border: 2px solid $tertiary-color{
-        radius: 3em 0 3em 0;
+  @include color($tertiary-color, $primary-color);
+  border: 2px solid $tertiary-color{
+      radius: 0.5em 0.75em 0.75em 0;
     }
-    color: $tertiary-color;
+    color: $white;
     display: inline-block;
     font: {
         family: 'Asap', sans-serif;
@@ -34,7 +37,7 @@
     }
     letter-spacing: 0.01em;
     margin: 0;
-    padding: 0.5em 2em;
+    padding: 0.5em 2.3em;
     position: relative;
     text-decoration: none;
     transition: .2s all linear;
@@ -57,6 +60,11 @@
         cursor: pointer;
         display: inline-block;
         margin: 0 1em 0.7em 0;
+
+        @at-root &:hover {
+          animation: rock 0.75s linear infinite;
+          transform: scale(2);
+        }
 
         @at-root a { color: $black; }
 
@@ -84,6 +92,54 @@
         flex-direction: column;
         height: auto;
     }
+}
+
+.about {
+  .container {
+    flex-direction: row;
+  }
+  .text-wrapper {
+    width: 60%;
+  }
+  @at-root &_title {
+    font-size: 4em;
+  }
+
+  @at-root &_tech-list {
+    color: $tertiary-color;
+    display: flex;
+    font: {
+      family: 'Asap', sans-serif;
+      size: 1.4em;
+    }
+    flex-wrap: wrap;
+    list-style: none;
+
+    @at-root &-item {
+      flex-basis: 33.3%;
+      margin-top: 1em;
+
+      @at-root &:nth-child(1), &:nth-child(2),  &:nth-child(3), {
+        margin-top: 0;
+      }
+
+      @at-root &::before {
+        background-color: transparent;
+        border: {
+          radius: 0.3em;
+        }
+        color: $secondary-color;
+        content: '\f120';
+        font: {
+          family: "Font Awesome 5 Free";
+          size: 0.8em;
+          weight: 900;
+        }
+        margin-right: 0.3em;
+        padding: 0.3em;
+      }
+    }
+  }
 }
 
 .work {height: auto;}

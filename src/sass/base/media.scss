@@ -1,5 +1,5 @@
 // Set all default media styles (img, video, audio, etc)
-.about-img {
+.about_img {
     background: {
         image: url('../../assets/elijah.jpg');
         position: 50% 50%;
@@ -9,11 +9,11 @@
     border: {
         radius: 2em;
     }
-    height: 40em;
-    margin: 4em auto;
+    height: 35em;
+    margin: 0 4em 0;
     max-width: 100%;
     position: relative;
-    width: 40em;
+    width: 35em;
 
     &:after {
         background-color: $secondary-color;
