@@ -1,3 +1,13 @@
+.ff-pacifico {
+  font: {
+    family: 'Pacifico', cursive;
+    weight: 400;
+  }
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+
 .primary-text {
   color: $primary-color;
 }
