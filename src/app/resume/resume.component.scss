@@ -1,0 +1,60 @@
+@import '../../sass/utilities/variables.scss';
+@import '../../sass/utilities/mixins.scss';
+
+.resume {
+  display: flex;
+  flex-basis: 100%;
+  margin-top: 10em;
+
+  @at-root &__button {
+    background-color: $super-white;
+    border: none;
+    display: block;
+    font: {
+      family: 'Asap', sans-serif;
+      size: 1.8em;
+      weight: 700l
+    }
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    width: 100%;
+
+    @at-root &:hover, &:active {
+      background-color: lighten($primary-color, 30%);
+    }
+
+    @at-root &:not(:last-of-type) {
+      border-bottom: 1px solid $white;
+    }
+
+    @at-root &--active {
+      background-color: lighten($primary-color, 30%);
+      border-right: 2px solid $primary-color;
+    }
+  }
+
+  @at-root &__content {
+    display: none;
+    flex: {
+      direction: column;
+    }
+    padding: 0 3em;
+    position: relative;
+
+    @at-root &--active {
+      animation: appear 0.75s forwards;
+      display: flex;
+    }
+  }
+
+  @at-root &__sidebar {
+    background-color: $super-white;
+    flex-shrink: 0;
+    width: 200px;
+  }
+
+  @at-root &__title {
+    font-size: 3em;
+    margin: 0;
+  }
+}

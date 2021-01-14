@@ -13,6 +13,7 @@ import { BlogAllComponent } from './pages/blog/blog-all/blog-all.component';
 import { BlogSingleComponent } from './pages/blog/blog-single/blog-single.component';
 import { ProjectAllComponent } from './pages/work/project-all/project-all.component';
 import { ProjectSingleComponent } from './pages/work/project-single/project-single.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProjectSingleComponent } from './pages/work/project-single/project-sing
     BlogAllComponent,
     BlogSingleComponent,
     ProjectAllComponent,
-    ProjectSingleComponent
+    ProjectSingleComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
