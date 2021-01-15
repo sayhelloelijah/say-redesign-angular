@@ -10,31 +10,37 @@ export class ResumeComponent implements OnInit {
 
   constructor() { }
 
+  // ngOnInit(): void {}
+
   ngOnInit(): void {
     document.querySelectorAll(".resume__button").forEach(button => {
-      button.addEventListener("click", () => {
-        const sidebar = button.parentElement;
-        const resumeContainer = sidebar.parentElement;
-        const tabNumber = button.dataset.forTab;
-        const activeTab = resumeContainer.querySelector(`.resume__content[data-tab="${tabNumber}"]`);
 
-        sidebar.querySelectorAll(".resume__button").forEach(button => {
-          button.classList.remove("resume__button--active");
-        })
-        resumeContainer.querySelectorAll(".resume__content").forEach(content => {
-          content.classList.remove("resume__content--active");
-        })
+      if(button instanceof HTMLElement) {
 
-        button.classList.add("resume__button--active");
-        activeTab.classList.add("resume__content--active");
+        button.addEventListener("click", () => {
+          const sidebar: HTMLElement = button.parentElement;
+          const resumeContainer: HTMLElement = sidebar.parentElement;
+          const tabNumber: String = button.dataset.forTab;
+          const activeTab: HTMLElement = resumeContainer.querySelector(`.resume__content[data-tab="${tabNumber}"]`);
 
-      });
+          sidebar.querySelectorAll(".resume__button").forEach(button => {
+            button.classList.remove("resume__button--active");
+          });
+
+          resumeContainer.querySelectorAll(".resume__content").forEach(content => {
+            content.classList.remove("resume__content--active");
+          });
+
+          button.classList.add("resume__button--active");
+          activeTab.classList.add("resume__content--active");
+
+        });
+        document.querySelectorAll(".resume").forEach(container => {
+            container.querySelector(".resume__sidebar .resume__button");
+            button.click();
+        });
+      }
     });
-
-    document.querySelectorAll(".resume").forEach(container => {
-      container.querySelector(".resume__sidebar .resume__button").click();
-    });
-
   }
 
 }
