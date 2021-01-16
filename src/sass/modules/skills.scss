@@ -1,0 +1,35 @@
+@at-root .tech-list {
+  color: $tertiary-color;
+  display: flex;
+  font: {
+    family: 'Asap', sans-serif;
+    size: 1.4em;
+  }
+  flex-wrap: wrap;
+  list-style: none;
+
+  @at-root &-item {
+    flex-basis: 33.3%;
+    margin-top: 1em;
+
+    @at-root &:nth-child(1), &:nth-child(2),  &:nth-child(3) {
+      margin-top: 0;
+    }
+
+    @at-root &::before {
+      background-color: transparent;
+      border: {
+        radius: 0.3em;
+      }
+      color: $secondary-color;
+      content: '\f120';
+      font: {
+        family: "Font Awesome 5 Free";
+        size: 0.8em;
+        weight: 900;
+      }
+      margin-right: 0.3em;
+      padding: 0.3em;
+    }
+  }
+}

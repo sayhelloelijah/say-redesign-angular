@@ -43,8 +43,8 @@
     text-decoration: none;
     transition: .2s all linear;
 
-    @at-root &:hover, &:active {
-      animation: 1s slide infinite;
+    @at-root &:hover, &:active, &:focus {
+      animation: 1s pulse infinite;
     }
 }
 
@@ -60,26 +60,27 @@
         display: inline-block;
         margin: 0 1em 0.7em 0;
 
-        @at-root &:hover {
-          animation: rock 0.75s linear infinite;
-          transform: scale(2);
+        @at-root &--rock {
+          @at-root &:hover i, &:focus i {
+            animation: rock 0.75s infinite;
+          }
         }
 
         @at-root a { color: $black; }
 
-        @at-root &--email:hover {
+        @at-root &--email:hover, &--email:focus {
           color: darken($primary-color, 40%);
         }
 
-        @at-root &--facebook:hover {
+        @at-root &--facebook:hover,  &--facebook:focus {
             color: $facebook;
         }
 
-        @at-root &--instagram:hover {
+        @at-root &--instagram:hover,  &--instagram:focus {
           color: $instagram;
         }
 
-        @at-root &--linked-in:hover {
+        @at-root &--linked-in:hover,  &--linked-in:focus {
           color: $linkedin;
       }
     }
@@ -102,42 +103,6 @@
   }
   @at-root &_title {
     font-size: 4em;
-  }
-
-  @at-root &_tech-list {
-    color: $tertiary-color;
-    display: flex;
-    font: {
-      family: 'Asap', sans-serif;
-      size: 1.4em;
-    }
-    flex-wrap: wrap;
-    list-style: none;
-
-    @at-root &-item {
-      flex-basis: 33.3%;
-      margin-top: 1em;
-
-      @at-root &:nth-child(1), &:nth-child(2),  &:nth-child(3) {
-        margin-top: 0;
-      }
-
-      @at-root &::before {
-        background-color: transparent;
-        border: {
-          radius: 0.3em;
-        }
-        color: $secondary-color;
-        content: '\f120';
-        font: {
-          family: "Font Awesome 5 Free";
-          size: 0.8em;
-          weight: 900;
-        }
-        margin-right: 0.3em;
-        padding: 0.3em;
-      }
-    }
   }
 }
 

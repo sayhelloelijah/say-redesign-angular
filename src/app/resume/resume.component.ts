@@ -10,8 +10,6 @@ export class ResumeComponent implements OnInit {
 
   constructor() { }
 
-  // ngOnInit(): void {}
-
   ngOnInit(): void {
     document.querySelectorAll(".resume__button").forEach(button => {
 
@@ -36,8 +34,8 @@ export class ResumeComponent implements OnInit {
 
         });
         document.querySelectorAll(".resume").forEach(container => {
-            container.querySelector(".resume__sidebar .resume__button");
-            button.click();
+            const btn: HTMLElement = container.querySelector(".resume__sidebar .resume__button");
+            btn.click();
         });
       }
     });
