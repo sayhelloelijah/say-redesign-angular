@@ -1,5 +1,12 @@
 .home {
     background-color: $primary-color;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      h1{
+        font-size: 5.5em;
+      }
+    }
 
     @at-root &_copy {
       max-width: 29em;
@@ -11,9 +18,9 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    height: calc(100% - 180px);
     margin: 0 auto;
     max-width: 636px;
+    min-height: calc(100% - 180px);
     padding: 4em 2em;
     width: 100%;
 
