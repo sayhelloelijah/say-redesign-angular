@@ -11,7 +11,7 @@
   }
   justify-content: center;
   left: 0;
-  padding: 0 1em;
+  padding: 0 0.25em;
   position: fixed;
   right: 0;
   width: 100%;
@@ -44,7 +44,7 @@
         }
         font-size: 0.75em;
         justify-content: center;
-        padding: 1.25em 0;
+        padding: 1.25em 2em;
         text-decoration: none;
 
         @at-root &--active {
