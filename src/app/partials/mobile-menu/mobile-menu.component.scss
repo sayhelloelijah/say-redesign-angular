@@ -1,0 +1,56 @@
+@import '../../../sass/utilities/variables.scss';
+
+.mobile-nav {
+  align-items: center;
+  background-color: $black;
+  bottom: 0px;
+  color: $primary-color;
+  display: flex;
+  flex: {
+    direction: row;
+  }
+  justify-content: center;
+  left: 0;
+  padding: 0 1em;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @at-root &__list {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    max-width: 100%;
+    width: 100%;
+
+    @at-root &-item {
+      @at-root &-icon {
+        font-size: 1.8em;
+        margin-bottom: .25em;
+      }
+      @at-root &-link {
+        align-items: center;
+        color: $white;
+        display: flex;
+        flex: {
+          direction: column;
+        }
+        font-size: 0.75em;
+        justify-content: center;
+        padding: 1.25em 0;
+        text-decoration: none;
+
+        @at-root &--active {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+}

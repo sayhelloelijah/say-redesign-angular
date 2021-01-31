@@ -14,7 +14,7 @@ import { BlogSingleComponent } from './pages/blog/blog-single/blog-single.compon
 import { ProjectAllComponent } from './pages/work/project-all/project-all.component';
 import { ProjectSingleComponent } from './pages/work/project-single/project-single.component';
 import { ResumeComponent } from './resume/resume.component';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+import { MobileMenuComponent } from './partials/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
