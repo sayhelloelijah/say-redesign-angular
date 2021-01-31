@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-project-all',
-  templateUrl: './project-all.component.html',
-  styleUrls: ['./project-all.component.scss']
+  templateUrl: './project-all.component.html'
 })
 export class ProjectAllComponent implements OnInit {
 
