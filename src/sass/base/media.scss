@@ -15,6 +15,10 @@
     position: relative;
     width: 35em;
 
+    @media screen and (max-width: 768px) {
+      margin: 0 0 4em;
+    }
+
     &:after {
         background-color: $secondary-color;
         border: {
