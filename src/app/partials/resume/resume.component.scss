@@ -32,32 +32,61 @@
       }
     }
 
+    @at-root &:last-child {
+      border: {
+        radius: 0 1em 0 0;
+      }
+    }
+
     @at-root &:hover, &:active, &:focus {
       background-color: lighten($primary-color, 30%);
     }
 
     @at-root &:not(:last-of-type) {
       border-bottom: 1px solid $white;
+
+      @media screen and (max-width: 768px) {
+        border-bottom: none;
+      }
     }
 
     @at-root &--active {
       background-color: lighten($primary-color, 30%);
     }
+
+    @at-root &--desktop {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @at-root &--mobile {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: inline-block;
+      }
+    }
   }
 
   @at-root &__container {
     align-self: center;
-  background-color: $super-white;
-  border: 1px solid $white {
-      radius: 2em;
-  }
-  box-shadow: 1em .7em 1em rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  margin: 1em auto 3em;
-  min-height: 350px;
-  position: relative;
-  width: 70%;
+    background-color: $super-white;
+    border: 1px solid $white {
+        radius: 2em;
+    }
+    box-shadow: 1em .7em 1em rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin: 1em auto 3em;
+    min-height: 350px;
+    position: relative;
+    width: 70%;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+    }
 
   &:after {
     background-color: $primary-color;
@@ -112,6 +141,13 @@
       left: 1em;
       top: 2em;
     }
+
+    @media screen and (max-width: 768px) {
+      margin: {
+        left: 0.5em;
+        top: 1.5em;
+      }
+    }
   }
 
   @at-root &__sidebar {
@@ -122,6 +158,22 @@
     }
     flex-shrink: 0;
     width: 200px;
+
+    @media screen and (max-width: 768px) {
+      align-items: center;
+      border: {
+        bottom: 3px solid lighten($primary-color, 30%);
+        radius: 2em 2em 0 0;
+        right: none;
+      }
+      display: flex;
+      font-size: 0.75em;
+      flex: {
+        direction: row;
+      }
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   @at-root &__skills {

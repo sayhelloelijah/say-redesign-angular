@@ -12,7 +12,6 @@
   }
   justify-content: center;
   left: 0;
-  padding: 0 0.25em;
   position: fixed;
   right: 0;
   width: 100%;
@@ -26,12 +25,13 @@
     align-items: center;
     color: inherit;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
     max-width: 100%;
     width: 100%;
 
     @at-root &-item {
+      flex-grow: 1;
       @at-root &-icon {
         font-size: 1.8em;
         margin-bottom: .25em;
@@ -45,8 +45,10 @@
         }
         font-size: 0.75em;
         justify-content: space-evenly;
+        outline: none;
         padding: 1.25em 2em;
         text-decoration: none;
+        transition: .75s all ease;
 
         @at-root &--active {
           border-top: 5px solid $primary-color;
