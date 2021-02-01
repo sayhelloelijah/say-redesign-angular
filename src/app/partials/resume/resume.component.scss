@@ -109,6 +109,10 @@
     padding: 3em;
     position: relative;
 
+    @media screen and (max-width: 768px) {
+      padding: 4em 2em 3em;
+    }
+
     @at-root &--active {
       animation: appear 0.75s forwards;
       display: flex;
@@ -132,6 +136,14 @@
     position: absolute;
     top: 2em;
     right: 2em;
+
+    @media screen and (max-width: 768px) {
+      font: {
+        size: 1.4em;
+      }
+      top: 1em;
+      right: 2em;
+    }
 }
 
   @at-root &__section-title {
